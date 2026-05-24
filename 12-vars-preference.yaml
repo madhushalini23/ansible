@@ -12,4 +12,4 @@
   tasks:
   - name: print the variables
     ansible.builtin.debug:
-      msg: "hello from {{ GREET }}
+      msg: "hello from {{ GREET }}"
