@@ -12,4 +12,4 @@
   tasks:
   - name: print the variables
     ansible.builtin.debug:
-      msg: "course is {{ COURSE }}, duration {{ DURATION }}, trainer is {{ TRAINER }}"
+      msg: "hello from {{ GREET }}
