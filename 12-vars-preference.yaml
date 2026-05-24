@@ -1,0 +1,15 @@
+- name: variables
+  hosts: local
+  connection: local
+  vars:
+    GREET: "PLAY"
+  vars_files:
+  - course.yaml
+  vars_prompt:
+  - name: GREET
+    prompt: enter the value
+    private: false
+  tasks:
+  - name: print the variables
+    ansible.builtin.debug:
+      msg: "course is {{ COURSE }}, duration {{ DURATION }}, trainer is {{ TRAINER }}"
