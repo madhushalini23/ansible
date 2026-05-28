@@ -1,5 +1,5 @@
 - name: install nginx
-  hosts: wed
+  hosts: web
   become: yes
   tasks:
   - name: install nginx in RHEL
