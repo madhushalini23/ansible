@@ -16,9 +16,9 @@
   - name: convert dict to list of dict
     vars:
       course:
-        name: Ansible
-        duration: 10hrs
-        trainer: sivakumar
+        name: "Ansible"
+        duration: "10hrs"
+        trainer: "sivakumar"
       ansible.builtin.debug:
         msg: "course info: {{ course | dict2items }}"
 
