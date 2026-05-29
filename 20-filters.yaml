@@ -13,7 +13,7 @@
         msg: "fruits are: {{ fruits | split(',') }}"
 
 
-    - name: convert dict to list of dict
+    - name: convert map into list
       vars:
         course:
           name: "Ansible"
@@ -21,4 +21,17 @@
           trainer: "sivakumar"
       ansible.builtin.debug:
         msg: "course info: {{ course | dict2items }}"
+
+      
+    - name: convert list into map
+      vars:
+        course:
+        - {'key': 'name', 'value': 'Ansible'}
+        - {'key': 'duration', 'value': '10hrs'}
+        - {'key': 'trainer', 'value': 'sivakumar'}
+      ansible.builtin.debug:
+        msg: "course info: {{ course | items2dict }}"
+
+
+
 
