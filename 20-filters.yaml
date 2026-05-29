@@ -2,23 +2,23 @@
   hosts: local
   connection: local
   tasks:
-  - name: handle undefine variable
-    ansible.builtin.debug:
-      msg: "Hello {{ person | default('ramesh') }}"
+    - name: handle undefined variable
+      ansible.builtin.debug:
+        msg: "Hello {{ person | default('ramesh') }}"
 
-  - name: convert string to list
-    vars:
-      fruits: "apple, banana, orange"  #string
-    ansible.builtin.debug:
-      msg: "fruits are: {{ fruits | split(',') }}"
+    - name: convert string to list
+      vars:
+        fruits: "apple, banana, orange"  #string
+      ansible.builtin.debug:
+        msg: "fruits are: {{ fruits | split(',') }}"
 
 
-  - name: convert dict to list of dict
-    vars:
-      course:
-        name: "Ansible"
-        duration: "10hrs"
-        trainer: "sivakumar"
+    - name: convert dict to list of dict
+      vars:
+        course:
+          name: "Ansible"
+          duration: "10hrs"
+          trainer: "sivakumar"
       ansible.builtin.debug:
         msg: "course info: {{ course | dict2items }}"
 
